@@ -92,6 +92,26 @@
             </thead>
             <tbody>
                 <tr>
+                    <td rowspan="4">Right IJV</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="right_ijv_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">9-14 mm</td>
+                </tr>
+                <tr>
+                    <td>Area</td>
+                    <td><input type="number" name="right_ijv_area" step="0.01"> cm2</td>
+                    <td class="reference-values">27 cm2</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.8 - 1.0</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
+                </tr>
+
+                <tr>
                     <td rowspan="4">Right CCA</td>
                     <td>Diameter</td>
                     <td><input type="number" name="right_cca_diameter" step="0.01"> mm</td>
@@ -112,25 +132,6 @@
                 </tr>
 
 
-                <tr>
-                    <td rowspan="4">Left CCA</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="left_cca_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">0.9 - 1.1 cm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_cca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">90 - 120 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_cca_ri" step="0.01"></td>
-                    <td class="reference-values">0.6 - 0.8</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_cca_comments"></textarea></td>
-                </tr>
 
                 <tr>
                     <td rowspan="4">Right ICA</td>
@@ -152,25 +153,6 @@
                     <td colspan="2">Comments: <textarea name="right_ica_comments"></textarea></td>
                 </tr>
 
-                <tr>
-                    <td rowspan="4">Left ICA</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="left_ica_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">0.6 - 0.8 cm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_ica_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">60 - 100 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_ica_ri" step="0.01"></td>
-                    <td class="reference-values">0.7 - 0.9</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_ica_comments"></textarea></td>
-                </tr>
 
                 <tr>
                     <td rowspan="4">Right ECA</td>
@@ -190,6 +172,111 @@
                 </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="right_eca_comments"></textarea></td>
+                </tr>
+
+
+
+                <tr>
+                    <td rowspan="4">R V1</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">2 - 4.4 mm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">20 - 80 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.56 - 0.86</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="4">R V2</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="R_V2_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">2 - 4.4 mm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">20 - 80 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.56 - 0.86</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="4">Left IJV</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="left_ijv_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">0.4 - 0.6 cm</td>
+                </tr>
+                <tr>
+                    <td>Area</td>
+                    <td><input type="number" name="left_ijv_area" step="0.01"> cm2</td>
+                    <td class="reference-values">27 cm2</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.8 - 1.0</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">Left CCA</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="left_cca_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">0.9 - 1.1 cm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_cca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">90 - 120 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_cca_ri" step="0.01"></td>
+                    <td class="reference-values">0.6 - 0.8</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_cca_comments"></textarea></td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="4">Left ICA</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="left_ica_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">0.6 - 0.8 cm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_ica_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">60 - 100 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_ica_ri" step="0.01"></td>
+                    <td class="reference-values">0.7 - 0.9</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_ica_comments"></textarea></td>
                 </tr>
 
                 <tr>
@@ -213,26 +300,6 @@
                 </tr>
 
                 <tr>
-                    <td rowspan="4">R V1</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">2 - 4.4 mm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">20 - 80 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.56 - 0.86</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
-                </tr>
-
-                <tr>
                     <td rowspan="4">L V1</td>
                     <td>Diameter</td>
                     <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
@@ -253,9 +320,9 @@
                 </tr>
 
                 <tr>
-                    <td rowspan="4">R V2</td>
+                    <td rowspan="4">L V2</td>
                     <td>Diameter</td>
-                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
+                    <td><input type="number" name="L_V2_diameter" step="0.01"> mm</td>
                     <td class="reference-values">2 - 4.4 mm</td>
                 </tr>
                 <tr>
@@ -272,22 +339,4 @@
                     <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
                 </tr>
 
-                <tr>
-                    <td rowspan="4">L V1</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">2 - 4.4 mm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">20 - 80 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.56 - 0.86</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
-                </tr>
+
