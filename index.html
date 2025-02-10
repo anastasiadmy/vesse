@@ -1,53 +1,227 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма обстеження</title>
+    <title>Input Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Форма обстеження</h1>
-        <form id="examinationForm">
-
+        <h1>Medical Examination Form</h1>
+        <form id="examForm">
             <table>
                 <thead>
                     <tr>
-                        <th>Назва</th>
-                        <th>Характеристика</th>
-                        <th>Значення</th>
+                        <th>Name</th>
+                        <th>Value</th>
+                        <th>Characteristics</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Vel max</td>
+                        <td rowspan="4">CCA right</td>
+                        <td>Diam</td>
+                        <td><input type="number" name="ccaRightDiam"></td>
+                    </tr>
+                    <tr>
+                        <td>Velocity</td>
+                        <td><input type="number" name="ccaRightVelocity"></td>
+                    </tr>
+                    <tr>
                         <td>RI</td>
-                        <td><input type="text" name="vMaxRi"></td>
-                        <td>d mm</td>
-                        <td><input type="text" name="vMaxD"></td>
+                        <td><input type="number" name="ccaRightRI"></td>
                     </tr>
                     <tr>
-                        <td>CCA right</td>
-                        <td colspan="4">
-                            <label>Прохідність:</label> <select name="ccaRight проходимость"><option value="прохідна">Прохідна</option><option value="не прохідна">Не прохідна</option></select><br>
-                            <label>Хід:</label> <select name="ccaRight хід"><option value="прямий">Прямий</option><option value="звивистий">Звивистий</option></select><br>
-                            <label>KIM:</label> <input type="text" name="ccaRight KIM"><br>
-                            <label>Поверхня:</label> <select name="ccaRight поверхня"><option value="рівна не потовщена">Рівна не потовщена</option><option value="потовщена рівномірно">Потовщена рівномірно</option><option value="потовщена нерівномірно">Потовщена нерівномірно</option></select><br>
-                            <label>Диференціація шарів:</label> <select name="ccaRight диференціація"><option value="збережена">Збережена</option><option value="втрачена">Втрачена</option><option value="частково втрачена">Частково втрачена</option></select>
-                        </td>
+                        <td>KIM</td>
+                        <td><input type="number" name="ccaRightKIM"></td>
                     </tr>
                     <tr>
-                        <td>CCA Left</td>
-                        <td colspan="4">
-                            <label>Прохідність:</label> <select name="ccaLeft проходимость"><option value="прохідна">Прохідна</option><option value="не прохідна">Не прохідна</option></select><br>
-                            <label>Хід:</label> <select name="ccaLeft хід"><option value="прямий">Прямий</option><option value="звивистий">Звивистий</option></select><br>
-                            <label>KIM:</label> <input type="text" name="ccaLeft KIM"><br>
-                            <label>Поверхня:</label> <select name="ccaLeft поверхня"><option value="рівна не потовщена">Рівна не потовщена</option><option value="потовщена рівномірно">Потовщена рівномірно</option><option value="потовщена нерівномірно">Потовщена нерівномірно</option></select><br>
-                            <label>Диференціація шарів:</label> <select name="ccaLeft диференціація"><option value="збережена">Збережена</option><option value="втрачена">Втрачена</option><option value="частково втрачена">Частково втрачена</option></select>
-                        </td>
+                        <td colspan="2">Прохідність: <select name="ccaRight проходимость">
+                            <option value="прохідна">Прохідна</option>
+                            <option value="не прохідна">Не прохідна</option>
+                        </select></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td>BCA R</td>
-                        <td colspan="4">
-                            <label>Прохідність:</label> <select name="bcaR проходимость"><option value="прохідна">Прохідна</option><option value="не прохідна">Не прохідна</option></
+                        <td colspan="2">Хід: <select name="ccaRight ход">
+                            <option value="прямий">Прямий</option>
+                            <option value="звивистий">Звивистий</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Поверхня: <select name="ccaRight поверхня">
+                            <option value="рівна не потовщена">Рівна не потовщена</option>
+                            <option value="потовщена рівномірно">Потовщена рівномірно</option>
+                            <option value="потовщена нерівномірно">Потовщена нерівномірно</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Диференціація шарів: <select name="ccaRight диференціація">
+                            <option value="збережена">Збережена</option>
+                            <option value="втрачена">Втрачена</option>
+                            <option value="частково втрачена">Частково втрачена</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    <tr>
+                        <td rowspan="4">CCA Left</td>
+                        <td>Diam</td>
+                        <td><input type="number" name="ccaLeftDiam"></td>
+                    </tr>
+                    <tr>
+                        <td>Velocity</td>
+                        <td><input type="number" name="ccaLeftVelocity"></td>
+                    </tr>
+                    <tr>
+                        <td>RI</td>
+                        <td><input type="number" name="ccaLeftRI"></td>
+                    </tr>
+                    <tr>
+                        <td>KIM</td>
+                        <td><input type="number" name="ccaLeftKIM"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Прохідність: <select name="ccaLeft проходимость">
+                            <option value="прохідна">Прохідна</option>
+                            <option value="не прохідна">Не прохідна</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Хід: <select name="ccaLeft ход">
+                            <option value="прямий">Прямий</option>
+                            <option value="звивистий">Звивистий</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Поверхня: <select name="ccaLeft поверхня">
+                            <option value="рівна не потовщена">Рівна не потовщена</option>
+                            <option value="потовщена рівномірно">Потовщена рівномірно</option>
+                            <option value="потовщена нерівномірно">Потовщена нерівномірно</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Диференціація шарів: <select name="ccaLeft диференціація">
+                            <option value="збережена">Збережена</option>
+                            <option value="втрачена">Втрачена</option>
+                            <option value="частково втрачена">Частково втрачена</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <tr>
+                        <td rowspan="4">BCA R</td>
+                        <td>Diam</td>
+                        <td><input type="number" name="bcaRDiam"></td>
+                    </tr>
+                    <tr>
+                        <td>Velocity</td>
+                        <td><input type="number" name="bcaRVelocity"></td>
+                    </tr>
+                    <tr>
+                        <td>RI</td>
+                        <td><input type="number" name="bcaRRI"></td>
+                    </tr>
+                    <tr>
+                        <td>KIM</td>
+                        <td><input type="number" name="bcaRKIM"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Прохідність: <select name="bcaR проходимость">
+                            <option value="прохідна">Прохідна</option>
+                            <option value="не прохідна">Не прохідна</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Хід: <select name="bcaR хід">
+                            <option value="прямий">Прямий</option>
+                            <option value="звивистий">Звивистий</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Поверхня: <select name="bcaR поверхня">
+                            <option value="рівна не потовщена">Рівна не потовщена</option>
+                            <option value="потовщена рівномірно">Потовщена рівномірно</option>
+                            <option value="потовщена нерівномірно">Потовщена нерівномірно</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Диференціація шарів: <select name="bcaR диференціація">
+                            <option value="збережена">Збережена</option>
+                            <option value="втрачена">Втрачена</option>
+                            <option value="частково втрачена">Частково втрачена</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <tr>
+                        <td rowspan="4">BCA L</td>
+                        <td>Diam</td>
+                        <td><input type="number" name="bcaLDiam"></td>
+                    </tr>
+                    <tr>
+                        <td>Velocity</td>
+                        <td><input type="number" name="bcaLVelocity"></td>
+                    </tr>
+                    <tr>
+                        <td>RI</td>
+                        <td><input type="number" name="bcaLRI"></td>
+                    </tr>
+                    <tr>
+                        <td>KIM</td>
+                        <td><input type="number" name="bcaLKIM"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Прохідність: <select name="bcaL проходимость">
+                            <option value="прохідна">Прохідна</option>
+                            <option value="не прохідна">Не прохідна</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Хід: <select name="bcaL хід">
+                            <option value="прямий">Прямий</option>
+                            <option value="звивистий">Звивистий</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Поверхня: <select name="bcaL поверхня">
+                            <option value="рівна не потовщена">Рівна не потовщена</option>
+                            <option value="потовщена рівномірно">Потовщена рівномірно</option>
+                            <option value="потовщена нерівномірно">Потовщена нерівномірно</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Диференціація шарів: <select name="bcaL диференціація">
