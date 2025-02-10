@@ -3,228 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Form</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Carotid & Vertebral Duplex Ultrasound Exam Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        input[type="number"], select, textarea {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .reference-values {
+            font-size: smaller;
+            color: #777;
+        }
+        @media (max-width: 600px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+                /* Styles for Mobile */
+        @media (max-width: 600px) {
+            table {
+                display: block; /* Make table scrollable */
+                overflow-x: auto;
+            }
+            th, td {
+                display: table-cell; /* Restore table cell behavior */
+            }
+            /* Hide labels on small screens (optional) */
+            label {
+                display: none;
+            }
+            /* Make inputs take full width */
+            input, select, textarea {
+                width: 100%;
+            }
+
+            /* Improve readability on mobile */
+            th, td {
+                padding: 10px; /* Increase padding */
+                font-size: 14px; /* Adjust font size */
+            }
+
+            /* Add some margin to the patient name input */
+            #patient_name {
+                margin-bottom: 10px;
+            }
+
+            /* Stack elements vertically */
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Medical Examination Form</h1>
-        <form id="examForm">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Value</th>
-                        <th>Characteristics</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="4">CCA right</td>
-                        <td>Diam</td>
-                        <td><input type="number" name="ccaRightDiam"></td>
-                    </tr>
-                    <tr>
-                        <td>Velocity</td>
-                        <td><input type="number" name="ccaRightVelocity"></td>
-                    </tr>
-                    <tr>
-                        <td>RI</td>
-                        <td><input type="number" name="ccaRightRI"></td>
-                    </tr>
-                    <tr>
-                        <td>KIM</td>
-                        <td><input type="number" name="ccaRightKIM"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Прохідність: <select name="ccaRight проходимость">
-                            <option value="прохідна">Прохідна</option>
-                            <option value="не прохідна">Не прохідна</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Хід: <select name="ccaRight ход">
-                            <option value="прямий">Прямий</option>
-                            <option value="звивистий">Звивистий</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Поверхня: <select name="ccaRight поверхня">
-                            <option value="рівна не потовщена">Рівна не потовщена</option>
-                            <option value="потовщена рівномірно">Потовщена рівномірно</option>
-                            <option value="потовщена нерівномірно">Потовщена нерівномірно</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Диференціація шарів: <select name="ccaRight диференціація">
-                            <option value="збережена">Збережена</option>
-                            <option value="втрачена">Втрачена</option>
-                            <option value="частково втрачена">Частково втрачена</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>додатково</td>
-                        <td><input></td>
-                    </tr>
-                    
-                    
-                    
-                    
-                    
-                    
+    <h1>Carotid & Vertebral Duplex Ultrasound Exam Form</h1>
 
-                    <tr>
-                        <td rowspan="4">CCA Left</td>
-                        <td>Diam</td>
-                        <td><input type="number" name="ccaLeftDiam"></td>
-                    </tr>
-                    <tr>
-                        <td>Velocity</td>
-                        <td><input type="number" name="ccaLeftVelocity"></td>
-                    </tr>
-                    <tr>
-                        <td>RI</td>
-                        <td><input type="number" name="ccaLeftRI"></td>
-                    </tr>
-                    <tr>
-                        <td>KIM</td>
-                        <td><input type="number" name="ccaLeftKIM"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Прохідність: <select name="ccaLeft проходимость">
-                            <option value="прохідна">Прохідна</option>
-                            <option value="не прохідна">Не прохідна</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Хід: <select name="ccaLeft ход">
-                            <option value="прямий">Прямий</option>
-                            <option value="звивистий">Звивистий</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Поверхня: <select name="ccaLeft поверхня">
-                            <option value="рівна не потовщена">Рівна не потовщена</option>
-                            <option value="потовщена рівномірно">Потовщена рівномірно</option>
-                            <option value="потовщена нерівномірно">Потовщена нерівномірно</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Диференціація шарів: <select name="ccaLeft диференціація">
-                            <option value="збережена">Збережена</option>
-                            <option value="втрачена">Втрачена</option>
-                            <option value="частково втрачена">Частково втрачена</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <tr>
-                        <td rowspan="4">BCA R</td>
-                        <td>Diam</td>
-                        <td><input type="number" name="bcaRDiam"></td>
-                    </tr>
-                    <tr>
-                        <td>Velocity</td>
-                        <td><input type="number" name="bcaRVelocity"></td>
-                    </tr>
-                    <tr>
-                        <td>RI</td>
-                        <td><input type="number" name="bcaRRI"></td>
-                    </tr>
-                    <tr>
-                        <td>KIM</td>
-                        <td><input type="number" name="bcaRKIM"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Прохідність: <select name="bcaR проходимость">
-                            <option value="прохідна">Прохідна</option>
-                            <option value="не прохідна">Не прохідна</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Хід: <select name="bcaR хід">
-                            <option value="прямий">Прямий</option>
-                            <option value="звивистий">Звивистий</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Поверхня: <select name="bcaR поверхня">
-                            <option value="рівна не потовщена">Рівна не потовщена</option>
-                            <option value="потовщена рівномірно">Потовщена рівномірно</option>
-                            <option value="потовщена нерівномірно">Потовщена нерівномірно</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Диференціація шарів: <select name="bcaR диференціація">
-                            <option value="збережена">Збережена</option>
-                            <option value="втрачена">Втрачена</option>
-                            <option value="частково втрачена">Частково втрачена</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <tr>
-                        <td rowspan="4">BCA L</td>
-                        <td>Diam</td>
-                        <td><input type="number" name="bcaLDiam"></td>
-                    </tr>
-                    <tr>
-                        <td>Velocity</td>
-                        <td><input type="number" name="bcaLVelocity"></td>
-                    </tr>
-                    <tr>
-                        <td>RI</td>
-                        <td><input type="number" name="bcaLRI"></td>
-                    </tr>
-                    <tr>
-                        <td>KIM</td>
-                        <td><input type="number" name="bcaLKIM"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Прохідність: <select name="bcaL проходимость">
-                            <option value="прохідна">Прохідна</option>
-                            <option value="не прохідна">Не прохідна</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Хід: <select name="bcaL хід">
-                            <option value="прямий">Прямий</option>
-                            <option value="звивистий">Звивистий</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Поверхня: <select name="bcaL поверхня">
-                            <option value="рівна не потовщена">Рівна не потовщена</option>
-                            <option value="потовщена рівномірно">Потовщена рівномірно</option>
-                            <option value="потовщена нерівномірно">Потовщена нерівномірно</option>
-                        </select></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Диференціація шарів: <select name="bcaL диференціація">
+    <label for="patient_name">Patient Name:</label>
+    <input type="text" id="patient_name" name="patient_name" required><br><br>
+
+    <form action="#" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>Vessel</th>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                    <th>Reference Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4">Right CCA</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="right_cca_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">0.9 - 1.1 cm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="right_cca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">90 - 120 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="right_cca_ri" step="0.01"></td>
+                    <td class="reference-values">0.6 - 0.8</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="right_cca_comments"></textarea></td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="4">Left CCA</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="left_cca_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">0.9 - 1.1 cm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_cca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">90 - 120 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_cca_ri" step="0.01"></td>
+                    <td class="reference-values">0.6 - 0.8</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_cca_comments"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">Right ICA</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="right_ica_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">0.6 - 0.8 cm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="right_ica_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">60 - 100 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="right_ica_ri" step="0.01"></td>
+                    <td class="reference-values">0.7 - 0.9</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="right_ica_comments"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">Left ICA</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="left_ica_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">0.6 - 0.8 cm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_ica_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">60 - 100 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_ica_ri" step="0.01"></td>
+                    <td class="reference-values">0.7 - 0.9</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_ica_comments"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">Right ECA</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="right_eca_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">0.4 - 0.6 cm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="right_eca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">40 - 80 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="right_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.8 - 1.0</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="right_eca_comments"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">Left ECA</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="left_eca_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">0.4 - 0.6 cm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">40 - 80 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.8 - 1.0</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">R V1</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">2 - 4.4 mm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">20 - 80 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.56 - 0.86</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">L V1</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">2 - 4.4 mm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">20 - 80 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.56 - 0.86</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">R V2</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">2 - 4.4 mm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">20 - 80 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.56 - 0.86</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4">L V1</td>
+                    <td>Diameter</td>
+                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
+                    <td class="reference-values">2 - 4.4 mm</td>
+                </tr>
+                <tr>
+                    <td>Peak Systolic Velocity</td>
+                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
+                    <td class="reference-values">20 - 80 cm/s</td>
+                </tr>
+                <tr>
+                    <td>Resistive Index (RI)</td>
+                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
+                    <td class="reference-values">0.56 - 0.86</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
+                </tr>
