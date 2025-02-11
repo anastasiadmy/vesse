@@ -100,12 +100,17 @@
                 <tr>
                     <td>Area</td>
                     <td><input type="number" name="right_ijv_area" step="0.01"> cm2</td>
-                    <td class="reference-values">27 cm2</td>
+                    <td class="reference-values">0.71-2 cm2</td>
                 </tr>
                 <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.8 - 1.0</td>
+                    
+
+                <td colspan="2">Компресується: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">компресується повністю</option>
+                        <option value="dd3">компресується частково</option>
+                        <option value="dd">не компресується</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
@@ -115,18 +120,42 @@
                     <td rowspan="4">Right CCA</td>
                     <td>Diameter</td>
                     <td><input type="number" name="right_cca_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">0.9 - 1.1 cm</td>
+                    <td class="reference-values"> гіпоплазія 4,2 - 6,9 cm</td>
                 </tr>
                 <tr>
                     <td>Peak Systolic Velocity</td>
                     <td><input type="number" name="right_cca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">90 - 120 cm/s</td>
+                    <td class="reference-values">50 - 104 cm/s</td>
                 </tr>
                 <tr>
                     <td>Resistive Index (RI)</td>
                     <td><input type="number" name="right_cca_ri" step="0.01"></td>
-                    <td class="reference-values">0.6 - 0.8</td>
+                    <td class="reference-values">0.55 - 0.9</td>
                 </tr>
+                <tr>
+                    <td>KIM</td>
+                    <td><input type="number" name="kim" step="0.01"> mm</td>
+                    <td class="reference-values">до 1 мм</td>
+                </tr>
+                <tr>
+                    
+
+                <td colspan="2">Диференціація шарів: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">збережена</option>
+                        <option value="dd3">втрачена частково</option>
+                        <option value="dd">втрачена</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
+                </tr>
+              
                 <tr>
                     <td colspan="2">Comments: <textarea name="right_cca_comments"></textarea></td>
                 </tr>
@@ -137,17 +166,33 @@
                     <td rowspan="4">Right ICA</td>
                     <td>Diameter</td>
                     <td><input type="number" name="right_ica_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">0.6 - 0.8 cm</td>
+                    <td class="reference-values">3,3 - 7,2 cm</td>
                 </tr>
                 <tr>
                     <td>Peak Systolic Velocity</td>
                     <td><input type="number" name="right_ica_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">60 - 100 cm/s</td>
+                    <td class="reference-values">36 - 125 cm/s</td>
                 </tr>
                 <tr>
                     <td>Resistive Index (RI)</td>
                     <td><input type="number" name="right_ica_ri" step="0.01"></td>
-                    <td class="reference-values">0.7 - 0.9</td>
+                    <td class="reference-values">0.44 - 0.8</td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Прохідність: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прохідна</option>
+                        <option value="dd3">непрохідна</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="right_ica_comments"></textarea></td>
@@ -158,17 +203,33 @@
                     <td rowspan="4">Right ECA</td>
                     <td>Diameter</td>
                     <td><input type="number" name="right_eca_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">0.4 - 0.6 cm</td>
+                    <td class="reference-values">2,8-6 мm</td>
                 </tr>
                 <tr>
                     <td>Peak Systolic Velocity</td>
                     <td><input type="number" name="right_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">40 - 80 cm/s</td>
+                    <td class="reference-values">45 - 136 cm/s</td>
                 </tr>
                 <tr>
                     <td>Resistive Index (RI)</td>
                     <td><input type="number" name="right_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.8 - 1.0</td>
+                    <td class="reference-values">0.65 - 0,9 </td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Прохідність: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прохідна</option>
+                        <option value="dd3">непрохідна</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="right_eca_comments"></textarea></td>
@@ -180,7 +241,7 @@
                     <td rowspan="4">R V1</td>
                     <td>Diameter</td>
                     <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">2 - 4.4 mm</td>
+                    <td class="reference-values"> гіпоплазія 2 - 4.4 mm</td>
                 </tr>
                 <tr>
                     <td>Peak Systolic Velocity</td>
@@ -191,6 +252,30 @@
                     <td>Resistive Index (RI)</td>
                     <td><input type="number" name="left_eca_ri" step="0.01"></td>
                     <td class="reference-values">0.56 - 0.86</td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Прохідність: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прохідна</option>
+                        <option value="dd3">непрохідна</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Кровотік: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">антеградний</option>
+                        <option value="dd3">ретроградний</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
@@ -201,7 +286,7 @@
                     <td rowspan="4">R V2</td>
                     <td>Diameter</td>
                     <td><input type="number" name="R_V2_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">2 - 4.4 mm</td>
+                    <td class="reference-values"> гіпоплазія 2 - 4.4 mm</td>
                 </tr>
                 <tr>
                     <td>Peak Systolic Velocity</td>
@@ -213,6 +298,30 @@
                     <td><input type="number" name="left_eca_ri" step="0.01"></td>
                     <td class="reference-values">0.56 - 0.86</td>
                 </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Прохідність: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прохідна</option>
+                        <option value="dd3">непрохідна</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Кровотік: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">антеградний</option>
+                        <option value="dd3">ретроградний</option>
+                    </select></td>
+                </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
                 </tr>
@@ -222,17 +331,23 @@
                     <td rowspan="4">Left IJV</td>
                     <td>Diameter</td>
                     <td><input type="number" name="left_ijv_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">0.4 - 0.6 cm</td>
+                    <td class="reference-values">9-14 мm</td>
                 </tr>
                 <tr>
                     <td>Area</td>
                     <td><input type="number" name="left_ijv_area" step="0.01"> cm2</td>
-                    <td class="reference-values">27 cm2</td>
+                    <td class="reference-values">0,7-2 cm2</td>
                 </tr>
+
                 <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.8 - 1.0</td>
+                    
+
+                <td colspan="2">Компресується: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">компресується повністю</option>
+                        <option value="dd3">компресується частково</option>
+                        <option value="dd">не компресується</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
@@ -242,17 +357,40 @@
                     <td rowspan="4">Left CCA</td>
                     <td>Diameter</td>
                     <td><input type="number" name="left_cca_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">0.9 - 1.1 cm</td>
+                    <td class="reference-values"> гіпоплазія 4,2 - 6,9 cm</td>
                 </tr>
                 <tr>
                     <td>Peak Systolic Velocity</td>
                     <td><input type="number" name="left_cca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">90 - 120 cm/s</td>
+                    <td class="reference-values">50 - 104 cm/s</td>
                 </tr>
                 <tr>
                     <td>Resistive Index (RI)</td>
                     <td><input type="number" name="left_cca_ri" step="0.01"></td>
-                    <td class="reference-values">0.6 - 0.8</td>
+                    <td class="reference-values">0.55 - 0.9</td>
+                </tr>
+                <tr>
+                    <td>KIM</td>
+                    <td><input type="number" name="kim" step="0.01"> mm</td>
+                    <td class="reference-values">до 1 мм</td>
+                </tr>
+                <tr>
+                    
+
+                <td colspan="2">Диференціація шарів: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">збережена</option>
+                        <option value="dd3">втрачена частково</option>
+                        <option value="dd">втрачена</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="left_cca_comments"></textarea></td>
@@ -263,17 +401,33 @@
                     <td rowspan="4">Left ICA</td>
                     <td>Diameter</td>
                     <td><input type="number" name="left_ica_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">0.6 - 0.8 cm</td>
+                    <td class="reference-values">3,3-7,2 мm</td>
                 </tr>
                 <tr>
                     <td>Peak Systolic Velocity</td>
                     <td><input type="number" name="left_ica_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">60 - 100 cm/s</td>
+                    <td class="reference-values">36-125 cm/s</td>
                 </tr>
                 <tr>
                     <td>Resistive Index (RI)</td>
                     <td><input type="number" name="left_ica_ri" step="0.01"></td>
-                    <td class="reference-values">0.7 - 0.9</td>
+                    <td class="reference-values">0,44-0,8</td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Прохідність: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прохідна</option>
+                        <option value="dd3">непрохідна</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="left_ica_comments"></textarea></td>
@@ -283,17 +437,33 @@
                     <td rowspan="4">Left ECA</td>
                     <td>Diameter</td>
                     <td><input type="number" name="left_eca_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">0.4 - 0.6 cm</td>
+                    <td class="reference-values">2,8-6,0 мm</td>
                 </tr>
                 <tr>
                     <td>Peak Systolic Velocity</td>
                     <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">40 - 80 cm/s</td>
+                    <td class="reference-values">45-136 cm/s</td>
                 </tr>
                 <tr>
                     <td>Resistive Index (RI)</td>
                     <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.8 - 1.0</td>
+                    <td class="reference-values">0,65-0,9</td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Прохідність: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прохідна</option>
+                        <option value="dd3">непрохідна</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
@@ -315,6 +485,30 @@
                     <td><input type="number" name="left_eca_ri" step="0.01"></td>
                     <td class="reference-values">0.56 - 0.86</td>
                 </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Прохідність: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прохідна</option>
+                        <option value="dd3">непрохідна</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Кровотік: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">антеградний</option>
+                        <option value="dd3">ретроградний</option>
+                    </select></td>
+                </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
                 </tr>
@@ -335,8 +529,31 @@
                     <td><input type="number" name="left_eca_ri" step="0.01"></td>
                     <td class="reference-values">0.56 - 0.86</td>
                 </tr>
+                <tr>                  
+
+                <td colspan="2">Хід: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прямий</option>
+                        <option value="dd3">звивистий</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Прохідність: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">прохідна</option>
+                        <option value="dd3">непрохідна</option>
+                    </select></td>
+                </tr>
+                <tr>                  
+
+                <td colspan="2">Кровотік: <select name="m_reg">
+                        <option value="dd1">--</option>
+                        <option value="dd2">антеградний</option>
+                        <option value="dd3">ретроградний</option>
+                    </select></td>
+                </tr>
                 <tr>
                     <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
                 </tr>
-
 
