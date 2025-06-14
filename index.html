@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,56 +9,77 @@
         body {
             font-family: sans-serif;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
+
         th {
             background-color: #f0f0f0;
         }
-        input[type="number"], select, textarea {
+
+        input[type="number"],
+        select,
+        textarea {
             width: 100%;
             padding: 5px;
             box-sizing: border-box;
         }
+
         .reference-values {
             font-size: smaller;
             color: #777;
         }
+
         @media (max-width: 600px) {
             table {
                 display: block;
                 overflow-x: auto;
             }
         }
-                /* Styles for Mobile */
+
+        /* Styles for Mobile */
         @media (max-width: 600px) {
             table {
-                display: block; /* Make table scrollable */
+                display: block;
+                /* Make table scrollable */
                 overflow-x: auto;
             }
-            th, td {
-                display: table-cell; /* Restore table cell behavior */
+
+            th,
+            td {
+                display: table-cell;
+                /* Restore table cell behavior */
             }
+
             /* Hide labels on small screens (optional) */
             label {
                 display: none;
             }
+
             /* Make inputs take full width */
-            input, select, textarea {
+            input,
+            select,
+            textarea {
                 width: 100%;
             }
 
             /* Improve readability on mobile */
-            th, td {
-                padding: 10px; /* Increase padding */
-                font-size: 14px; /* Adjust font size */
+            th,
+            td {
+                padding: 10px;
+                /* Increase padding */
+                font-size: 14px;
+                /* Adjust font size */
             }
 
             /* Add some margin to the patient name input */
@@ -73,513 +95,395 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-    <h1>Carotid & Vertebral Duplex Ultrasound Exam Form</h1>
+        <h1>Carotid & Vertebral Duplex Ultrasound Exam Form</h1>
 
-    <label for="patient_name">Patient Name:</label>
-    <input type="text" id="patient_name" name="patient_name" required><br><br>
+        <label for="patient_name">Patient Name:</label>
+        <input type="text" id="patient_name" name="patient_name" required><br><br>
 
-    <form action="#" method="post">
-        <table>
-            <thead>
-                <tr>
-                    <th>Vessel</th>
-                    <th>Parameter</th>
-                    <th>Value</th>
-                    <th>Reference Values</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="4">Right IJV</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="right_ijv_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">9-14 mm</td>
-                </tr>
-                <tr>
-                    <td>Area</td>
-                    <td><input type="number" name="right_ijv_area" step="0.01"> cm2</td>
-                    <td class="reference-values">0.71-2 cm2</td>
-                </tr>
-                <tr>
-                    
+        <form action="#" method="post">
+            <table>
+                <thead>
 
-                <td colspan="2">Компресується: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">компресується повністю</option>
-                        <option value="dd3">компресується частково</option>
-                        <option value="dd">не компресується</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
-                </tr>
+                </thead>
+                <tbody>
 
-                <tr>
-                    <td rowspan="4">Right CCA</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="right_cca_diameter" step="0.01"> mm</td>
-                    <td class="reference-values"> гіпоплазія 4,2 - 6,9 cm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="right_cca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">50 - 104 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="right_cca_ri" step="0.01"></td>
-                    <td class="reference-values">0.55 - 0.9</td>
-                </tr>
-                <tr>
-                    <td>KIM</td>
-                    <td><input type="number" name="kim" step="0.01"> mm</td>
-                    <td class="reference-values">до 1 мм</td>
-                </tr>
-                <tr>
-                    
+                    <tr>
+                        <th colspan="2">Внутрішня яремна</th>
+                    </tr>
+                    <tr>
 
-                <td colspan="2">Диференціація шарів: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">збережена</option>
-                        <option value="dd3">втрачена частково</option>
-                        <option value="dd">втрачена</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                        <td><input type="number" name="right_ijv_diameter" step="0.01"> d</td>
+                        <td><input type="number" name="right_ijv_diameter" step="0.01"> 9-14 mm</td>
 
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-              
-                <tr>
-                    <td colspan="2">Comments: <textarea name="right_cca_comments"></textarea></td>
-                </tr>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="right_ijv_area" step="0.01"> area </td>
+                        <td><input type="number" name="right_ijv_area" step="0.01"> 0.71-2 cm2</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">повністю</option>
+                                <option value="dd3">частково</option>
+                                <option value="dd">не компр</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">повністю</option>
+                                <option value="dd3">частково</option>
+                                <option value="dd">не компр</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="right_cca_comments"></textarea></td>
+                        <td><textarea name="right_cca_comments"></textarea></td>
+
+                    </tr>
+                    <tr>
+                        <th colspan="2">Загальна СА</th>
+                    </tr>
 
 
+                    <tr>
+                        <td><input type="number" name="right_cca_psv" step="0.01">PS cm/s</td>
+                        <td><input type="number" name="right_cca_psv" step="0.01"> 50 - 104 cm/s</td>
 
-                <tr>
-                    <td rowspan="4">Right ICA</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="right_ica_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">3,3 - 7,2 cm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="right_ica_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">36 - 125 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="right_ica_ri" step="0.01"></td>
-                    <td class="reference-values">0.44 - 0.8</td>
-                </tr>
-                <tr>                  
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="right_cca_ri" step="0.01">RI</td>
+                        <td><input type="number" name="right_cca_ri" step="0.01">0.55 - 0.9</td>
 
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                    </tr>
+                    <tr>
 
-                <td colspan="2">Прохідність: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прохідна</option>
-                        <option value="dd3">непрохідна</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="right_ica_comments"></textarea></td>
-                </tr>
+                        <td><input type="number" name="right_cca_diameter" step="0.01"> d</td>
+                        <td><input type="number" name="right_cca_diameter" step="0.01">hyp 4,2 - 6,9 mm</td>
 
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="kim" step="0.01"> kim</td>
+                        <td><input type="number" name="kim" step="0.01"> до 1 мм</td>
 
-                <tr>
-                    <td rowspan="4">Right ECA</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="right_eca_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">2,8-6 мm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="right_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">45 - 136 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="right_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.65 - 0,9 </td>
-                </tr>
-                <tr>                  
+                    </tr>
+                    <tr>
 
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                        <td>диференціація
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">збережена</option>
+                                <option value="dd3">втрач частк</option>
+                                <option value="dd">втрачена</option>
+                            </select>
+                        </td>
 
-                <td colspan="2">Прохідність: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прохідна</option>
-                        <option value="dd3">непрохідна</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="right_eca_comments"></textarea></td>
-                </tr>
+                        <td>шарів
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">збережена</option>
+                                <option value="dd3">втрач частк</option>
+                                <option value="dd">втрачена</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>хід
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+                    </tr>
 
 
+                    <tr>
+                        <td>h+L,стеноз,відділ, стінка <textarea name="right_cca_comments"></textarea></td>
+                        <td>ехо, однор, екс/циркулярна<textarea name="right_cca_comments"></textarea></td>
 
-                <tr>
-                    <td rowspan="4">R V1</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
-                    <td class="reference-values"> гіпоплазія 2 - 4.4 mm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">20 - 80 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.56 - 0.86</td>
-                </tr>
-                <tr>                  
-
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-                <tr>                  
-
-                <td colspan="2">Прохідність: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прохідна</option>
-                        <option value="dd3">непрохідна</option>
-                    </select></td>
-                </tr>
-                <tr>                  
-
-                <td colspan="2">Кровотік: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">антеградний</option>
-                        <option value="dd3">ретроградний</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
-                </tr>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Внутрішня СА</th>
+                    </tr>
 
 
-                <tr>
-                    <td rowspan="4">R V2</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="R_V2_diameter" step="0.01"> mm</td>
-                    <td class="reference-values"> гіпоплазія 2 - 4.4 mm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">20 - 80 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.56 - 0.86</td>
-                </tr>
-                <tr>                  
+                    <tr>
+                        <td><input type="number" name="right_cca_psv" step="0.01">PS cm/s</td>
+                        <td><input type="number" name="right_cca_psv" step="0.01"> 36 - 125 cm/s</td>
 
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="right_cca_ri" step="0.01">RI</td>
+                        <td><input type="number" name="right_cca_ri" step="0.01">0.44 - 0.8</td>
 
-                <td colspan="2">Прохідність: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прохідна</option>
-                        <option value="dd3">непрохідна</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                    </tr>
+                    <tr>
 
-                <td colspan="2">Кровотік: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">антеградний</option>
-                        <option value="dd3">ретроградний</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
-                </tr>
+                        <td><input type="number" name="right_cca_diameter" step="0.01"> d</td>
+                        <td><input type="number" name="right_cca_diameter" step="0.01">3,3 - 7,2 cm</td>
 
+                    </tr>
 
-                <tr>
-                    <td rowspan="4">Left IJV</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="left_ijv_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">9-14 мm</td>
-                </tr>
-                <tr>
-                    <td>Area</td>
-                    <td><input type="number" name="left_ijv_area" step="0.01"> cm2</td>
-                    <td class="reference-values">0,7-2 cm2</td>
-                </tr>
+                    <tr>
 
-                <tr>
-                    
+                        <td>хід
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
 
-                <td colspan="2">Компресується: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">компресується повністю</option>
-                        <option value="dd3">компресується частково</option>
-                        <option value="dd">не компресується</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
-                </tr>
+                        <td>
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>h+L,стеноз,відділ, стінка <textarea name="right_cca_comments"></textarea></td>
+                        <td>ехо, однор, екс/циркулярна<textarea name="right_cca_comments"></textarea></td>
 
-                <tr>
-                    <td rowspan="4">Left CCA</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="left_cca_diameter" step="0.01"> mm</td>
-                    <td class="reference-values"> гіпоплазія 4,2 - 6,9 cm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_cca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">50 - 104 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_cca_ri" step="0.01"></td>
-                    <td class="reference-values">0.55 - 0.9</td>
-                </tr>
-                <tr>
-                    <td>KIM</td>
-                    <td><input type="number" name="kim" step="0.01"> mm</td>
-                    <td class="reference-values">до 1 мм</td>
-                </tr>
-                <tr>
-                    
-
-                <td colspan="2">Диференціація шарів: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">збережена</option>
-                        <option value="dd3">втрачена частково</option>
-                        <option value="dd">втрачена</option>
-                    </select></td>
-                </tr>
-                <tr>                  
-
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_cca_comments"></textarea></td>
-                </tr>
+                    </tr>
 
 
-                <tr>
-                    <td rowspan="4">Left ICA</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="left_ica_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">3,3-7,2 мm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_ica_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">36-125 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_ica_ri" step="0.01"></td>
-                    <td class="reference-values">0,44-0,8</td>
-                </tr>
-                <tr>                  
+                    <tr>
+                        <th colspan="2">Зовнішня СА</th>
+                    </tr>
 
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-                <tr>                  
 
-                <td colspan="2">Прохідність: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прохідна</option>
-                        <option value="dd3">непрохідна</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_ica_comments"></textarea></td>
-                </tr>
+                    <tr>
+                        <td><input type="number" name="right_cca_psv" step="0.01">PS cm/s</td>
+                        <td><input type="number" name="right_cca_psv" step="0.01"> 45 - 136 cm/s</td>
 
-                <tr>
-                    <td rowspan="4">Left ECA</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="left_eca_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">2,8-6,0 мm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">45-136 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0,65-0,9</td>
-                </tr>
-                <tr>                  
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="right_cca_ri" step="0.01">RI</td>
+                        <td><input type="number" name="right_cca_ri" step="0.01">0.65 - 0.9</td>
 
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                    </tr>
+                    <tr>
 
-                <td colspan="2">Прохідність: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прохідна</option>
-                        <option value="dd3">непрохідна</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
-                </tr>
+                        <td><input type="number" name="right_cca_diameter" step="0.01"> d</td>
+                        <td><input type="number" name="right_cca_diameter" step="0.01">2,8 - 6 cm</td>
 
-                <tr>
-                    <td rowspan="4">L V1</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="R_V1_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">2 - 4.4 mm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">20 - 80 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.56 - 0.86</td>
-                </tr>
-                <tr>                  
+                    </tr>
 
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                    <tr>
 
-                <td colspan="2">Прохідність: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прохідна</option>
-                        <option value="dd3">непрохідна</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                        <td>хід
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
 
-                <td colspan="2">Кровотік: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">антеградний</option>
-                        <option value="dd3">ретроградний</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
-                </tr>
+                        <td>
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td rowspan="4">L V2</td>
-                    <td>Diameter</td>
-                    <td><input type="number" name="L_V2_diameter" step="0.01"> mm</td>
-                    <td class="reference-values">2 - 4.4 mm</td>
-                </tr>
-                <tr>
-                    <td>Peak Systolic Velocity</td>
-                    <td><input type="number" name="left_eca_psv" step="0.01"> cm/s</td>
-                    <td class="reference-values">20 - 80 cm/s</td>
-                </tr>
-                <tr>
-                    <td>Resistive Index (RI)</td>
-                    <td><input type="number" name="left_eca_ri" step="0.01"></td>
-                    <td class="reference-values">0.56 - 0.86</td>
-                </tr>
-                <tr>                  
 
-                <td colspan="2">Хід: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прямий</option>
-                        <option value="dd3">звивистий</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                    <tr>
+                        <td>h+L,стеноз,відділ, стінка <textarea name="right_cca_comments"></textarea></td>
+                        <td>ехо, однор, екс/циркулярна<textarea name="right_cca_comments"></textarea></td>
 
-                <td colspan="2">Прохідність: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">прохідна</option>
-                        <option value="dd3">непрохідна</option>
-                    </select></td>
-                </tr>
-                <tr>                  
+                    </tr>
+                    <tr>
+                        <th colspan="2">Хребтова 1</th>
+                    </tr>
 
-                <td colspan="2">Кровотік: <select name="m_reg">
-                        <option value="dd1">--</option>
-                        <option value="dd2">антеградний</option>
-                        <option value="dd3">ретроградний</option>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comments: <textarea name="left_eca_comments"></textarea></td>
 
-<style>
-textarea {
-  resize: none; /* Prevents manual resizing by the user */
-  overflow: hidden; /* Hides any content that overflows initially */
-  min-height: 40px; /* Set a minimum height to start with */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  /* Add any other styling you want for the textarea */
-  padding: 5px; /* Example padding */
-  border: 1px solid #ccc; /* Example border */
-}
-</style>
-<script>
+                    <tr>
+                        <td><input type="number" name="right_cca_psv" step="0.01">PS cm/s</td>
+                        <td><input type="number" name="right_cca_psv" step="0.01"> 20 - 80 cm/s</td>
 
-const textareas = document.querySelectorAll('textarea');
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="right_cca_ri" step="0.01">RI</td>
+                        <td><input type="number" name="right_cca_ri" step="0.01">0.56 - 0.86</td>
 
-textareas.forEach(textarea => {
-  textarea.addEventListener('input', function() {
-    this.style.height = 'auto'; // Reset height to auto to recalculate
-    this.style.height = (this.scrollHeight) + 'px'; // Set height to scrollHeight
-  });
+                    </tr>
+                    <tr>
 
-  // Set initial height on page load (for content that might already be there)
-  textarea.style.height = (textarea.scrollHeight) + 'px';
-});
-</script>
-                </tr>
+                        <td><input type="number" name="right_cca_diameter" step="0.01"> d</td>
+                        <td><input type="number" name="right_cca_diameter" step="0.01"> hypo 2 - 4,4 cm</td>
 
+                    </tr>
+
+                    <tr>
+
+                        <td>хід
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>Кровотік
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>h+L,стеноз,відділ, стінка <textarea name="right_cca_comments"></textarea></td>
+                        <td>ехо, однор, екс/циркулярна<textarea name="right_cca_comments"></textarea></td>
+
+                    </tr>
+                    <tr>
+                        <th colspan="2">Хребтова 2</th>
+                    </tr>
+
+
+                    <tr>
+                        <td><input type="number" name="right_cca_psv" step="0.01">PS cm/s</td>
+                        <td><input type="number" name="right_cca_psv" step="0.01"> 20 - 80 cm/s</td>
+
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="right_cca_ri" step="0.01">RI</td>
+                        <td><input type="number" name="right_cca_ri" step="0.01">0.56 - 0.86</td>
+
+                    </tr>
+                    <tr>
+
+                        <td><input type="number" name="right_cca_diameter" step="0.01"> d</td>
+                        <td><input type="number" name="right_cca_diameter" step="0.01"> hypo 2 - 4,4 cm</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>хід
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">дещо звив</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>Кровотік
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m_reg">
+                                <option value="dd1">--</option>
+                                <option value="dd2">прямий</option>
+                                <option value="dd3">звивистий</option>
+                            </select>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>h+L,стеноз,відділ, стінка <textarea name="right_cca_comments"></textarea></td>
+                        <td>ехо, однор, екс/циркулярна<textarea name="right_cca_comments"></textarea></td>
+
+                    </tr>
+
+                    <style>
+                        textarea {
+                            resize: none;
+                            /* Prevents manual resizing by the user */
+                            overflow: hidden;
+                            /* Hides any content that overflows initially */
+                            min-height: 40px;
+                            /* Set a minimum height to start with */
+                            box-sizing: border-box;
+                            /* Include padding and border in the element's total width and height */
+                            /* Add any other styling you want for the textarea */
+                            padding: 5px;
+                            /* Example padding */
+                            border: 1px solid #ccc;
+                            /* Example border */
+                        }
+                    </style>
+                    <script>
+
+                        const textareas = document.querySelectorAll('textarea');
+
+                        textareas.forEach(textarea => {
+                            textarea.addEventListener('input', function () {
+                                this.style.height = 'auto'; // Reset height to auto to recalculate
+                                this.style.height = (this.scrollHeight) + 'px'; // Set height to scrollHeight
+                            });
+
+                            // Set initial height on page load (for content that might already be there)
+                            textarea.style.height = (textarea.scrollHeight) + 'px';
+                        });
+                    </script>
+                    </tr>
